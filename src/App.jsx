@@ -9,6 +9,10 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import AIAvatar from './pages/AIAvatar';
 import Contact from './pages/Contact';
+import SkillsTestLab from './pages/SkillsTestLab';
+import TimelineTestLab from './pages/TimelineTestLab';
+import BackgroundTestLab from './components/BackgroundTestLab';
+import NewColorTestLab from './components/NewColorTestLab';
 
 function App() {
   return (
@@ -26,6 +30,10 @@ function App() {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/ai-avatar" element={<AIAvatar />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/skills-test" element={<SkillsTestLab />} />
+            <Route path="/timeline-test" element={<TimelineTestLab />} />
+            <Route path="/background-test" element={<BackgroundTestLab />} />
+            <Route path="/color-test" element={<NewColorTestLab />} />
           </Routes>
         </AnimatePresence>
         <Footer />
