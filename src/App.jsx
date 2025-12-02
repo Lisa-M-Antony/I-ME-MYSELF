@@ -13,11 +13,12 @@ import SkillsTestLab from './pages/SkillsTestLab';
 import TimelineTestLab from './pages/TimelineTestLab';
 import BackgroundTestLab from './components/BackgroundTestLab';
 import NewColorTestLab from './components/NewColorTestLab';
+import ProfessionalBlackTestLab from './components/ProfessionalBlackTestLab';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-dark-900 text-white">
+      <div className="min-h-screen bg-black text-white">
         <Navbar />
         <AnimatePresence mode="wait">
           <Routes>
@@ -34,6 +35,7 @@ function App() {
             <Route path="/timeline-test" element={<TimelineTestLab />} />
             <Route path="/background-test" element={<BackgroundTestLab />} />
             <Route path="/color-test" element={<NewColorTestLab />} />
+            <Route path="/professional-black-test" element={<ProfessionalBlackTestLab />} />
           </Routes>
         </AnimatePresence>
         <Footer />

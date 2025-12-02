@@ -9,7 +9,7 @@ const Home = () => {
       icon: BarChart3,
       title: 'Data Analytics & Visualization',
       description: 'Transforming complex datasets into compelling insights through Excel, Tableau, and SQL mastery',
-      gradient: 'from-primary-400 to-copper-500',
+      gradient: 'from-slate-400 to-slate-500',
       mathSymbol: '∑'
     },
     {
@@ -23,7 +23,7 @@ const Home = () => {
       icon: Database,
       title: 'Mathematical Computation',
       description: 'Leveraging mathematical foundations with LaTeX, MATHEMATICA, and analytical research methodologies',
-      gradient: 'from-copper-400 to-parchment-500',
+      gradient: 'from-slate-400 to-slate-300',
       mathSymbol: '∂'
     }
   ];
@@ -57,7 +57,7 @@ const Home = () => {
         {mathSymbols.slice(0, 12).map((symbol, index) => (
           <motion.div
             key={symbol + index}
-            className="absolute text-4xl font-mathematical text-copper-400/20"
+            className="absolute text-4xl font-mathematical text-white/10"
             initial={{
               x: Math.random() * window.innerWidth,
               y: Math.random() * window.innerHeight,
@@ -121,7 +121,7 @@ const Home = () => {
                 
                 {/* Floating particles around profile */}
                 <motion.div
-                  className="absolute -top-3 -right-3 w-4 h-4 bg-copper-400/70 rounded-full shadow-lg"
+                  className="absolute -top-3 -right-3 w-4 h-4 bg-white/20 rounded-full shadow-lg"
                   animate={{
                     y: [-5, -15, -5],
                     x: [-2, 6, -2],
@@ -156,17 +156,17 @@ const Home = () => {
           {/* Name and Title */}
           <motion.div variants={itemVariants} className="space-y-6">
             <motion.h1
-              className="text-5xl md:text-7xl lg:text-8xl font-elegant font-bold text-transparent bg-gradient-to-r from-copper-400 via-copper-300 to-copper-500 bg-clip-text elegant-typography"
+              className="text-5xl md:text-7xl lg:text-8xl font-elegant font-bold text-transparent bg-gradient-to-r from-white via-slate-200 to-white bg-clip-text elegant-typography"
               animate={{
                 textShadow: [
-                  '0 0 20px rgba(176, 141, 87, 0.5), 0 0 40px rgba(176, 141, 87, 0.2)',
-                  '0 0 40px rgba(176, 141, 87, 0.8), 0 0 60px rgba(176, 141, 87, 0.4)',
-                  '0 0 20px rgba(176, 141, 87, 0.5), 0 0 40px rgba(176, 141, 87, 0.2)'
+                  '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)',
+                  '0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.2)',
+                  '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'
                 ]
               }}
               whileHover={{
                 scale: 1.02,
-                textShadow: '0 0 60px rgba(176, 141, 87, 1), 0 0 80px rgba(176, 141, 87, 0.6)'
+                textShadow: '0 0 60px rgba(255, 255, 255, 0.8), 0 0 80px rgba(255, 255, 255, 0.4)'
               }}
               transition={{
                 duration: 4,
@@ -185,8 +185,8 @@ const Home = () => {
               }}
               transition={{ duration: 0.3 }}
             >
-              <span className="text-copper-400 font-mathematical">MSc Mathematics</span>
-              <div className="w-2 h-2 bg-copper-400 rounded-full"></div>
+              <span className="text-slate-300 font-mathematical">MSc Mathematics</span>
+              <div className="w-2 h-2 bg-slate-300 rounded-full"></div>
               <span className="font-serif italic">Aspiring Data Scientist</span>
               <div className="w-2 h-2 bg-sage-400 rounded-full"></div>
               <span className="font-serif italic">Mathematician</span>
@@ -194,7 +194,7 @@ const Home = () => {
             
             <motion.div
               variants={itemVariants}
-              className="flex items-center justify-center space-x-2 text-sm text-copper-300/80"
+              className="flex items-center justify-center space-x-2 text-sm text-slate-400"
               whileHover={{
                 textShadow: '0 0 10px rgba(176, 141, 87, 0.8)'
               }}
@@ -245,7 +245,7 @@ const Home = () => {
 
               {/* Floating background orbs */}
               <motion.div
-                className="absolute top-4 right-8 w-16 h-16 bg-gradient-to-br from-copper-400/20 to-sage-400/10 rounded-full blur-xl"
+                className="absolute top-4 right-8 w-16 h-16 bg-gradient-to-br from-white/5 to-slate-400/5 rounded-full blur-xl"
                 animate={{
                   scale: [1, 1.3, 1],
                   opacity: [0.3, 0.6, 0.3]
@@ -253,7 +253,7 @@ const Home = () => {
                 transition={{ duration: 5, repeat: Infinity }}
               />
               <motion.div
-                className="absolute bottom-6 left-6 w-12 h-12 bg-gradient-to-tl from-sage-400/25 to-copper-400/15 rounded-full blur-lg"
+                className="absolute bottom-6 left-6 w-12 h-12 bg-gradient-to-tl from-slate-400/15 to-white/10 rounded-full blur-lg"
                 animate={{
                   scale: [1.2, 1, 1.2],
                   opacity: [0.2, 0.5, 0.2]
@@ -263,7 +263,7 @@ const Home = () => {
               
               {/* Enhanced decorative corners */}
               <motion.div 
-                className="absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-copper-400/60"
+                className="absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-white/20"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 transition={{ duration: 0.3 }}
               ></motion.div>
@@ -278,7 +278,7 @@ const Home = () => {
                 transition={{ duration: 0.3 }}
               ></motion.div>
               <motion.div 
-                className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-copper-400/60"
+                className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-white/20"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 transition={{ duration: 0.3 }}
               ></motion.div>
@@ -289,7 +289,7 @@ const Home = () => {
               
               {/* Enhanced mathematical formula decoration */}
               <motion.div 
-                className="absolute -bottom-0.499 left-1/2 transform -translate-x-1/2 text-base text-copper-300/80 font-mathematical bg-renaissance-charcoal-900/90 px-6 py-2 rounded-full backdrop-blur-md border border-copper-400/40 shadow-lg z-20"
+                className="absolute -bottom-0.499 left-1/2 transform -translate-x-1/2 text-base text-slate-400 font-mathematical bg-black/90 px-6 py-2 rounded-full backdrop-blur-md border border-white/20 shadow-lg z-20"
                 whileHover={{ scale: 1.1, y: -2 }}
                 transition={{ duration: 0.2 }}
                 style={{
@@ -315,9 +315,9 @@ const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group px-10 py-4 bg-gradient-to-r from-copper-600 via-copper-500 to-copper-600 hover:from-copper-500 hover:via-copper-400 hover:to-copper-500 
-                         rounded-xl shadow-xl shadow-copper-500/25 flex items-center space-x-3 text-parchment font-medium transition-all duration-300
-                         border border-copper-400/50 hover:border-copper-300 scholar-glow"
+                className="group px-10 py-4 bg-gradient-to-r from-slate-600 via-slate-500 to-slate-600 hover:from-slate-500 hover:via-slate-400 hover:to-slate-500 
+                         rounded-xl shadow-xl shadow-slate-500/25 flex items-center space-x-3 text-white font-medium transition-all duration-300
+                         border border-white/20 hover:border-white/30 scholar-glow"
               >
                 <span className="font-elegant">Explore My Work</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -373,9 +373,9 @@ const Home = () => {
               <div className="absolute -top-4 -left-4 text-copper-400/30 font-mathematical text-2xl">∑</div>
               <div className="absolute -top-4 -right-4 text-sage-400/30 font-mathematical text-2xl">∫</div>
               <div className="absolute -bottom-4 -left-4 text-sage-400/30 font-mathematical text-2xl">∂</div>
-              <div className="absolute -bottom-4 -right-4 text-copper-400/30 font-mathematical text-2xl">π</div>
+              <div className="absolute -bottom-4 -right-4 text-white/20 font-mathematical text-2xl">π</div>
               
-              <h2 className="text-4xl md:text-5xl font-elegant font-bold renaissance-gradient-text mb-6 elegant-typography">
+              <h2 className="text-4xl md:text-5xl font-elegant font-bold text-white mb-6 elegant-typography">
                 Fields of Inquiry
               </h2>
             </div>

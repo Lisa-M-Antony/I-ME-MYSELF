@@ -98,8 +98,8 @@ export default {
           '100%': { transform: 'translate(100vw, 0) rotate(360deg)', opacity: '0.3' },
         },
         'scholar-glow': {
-          '0%': { boxShadow: '0 0 25px rgba(176, 141, 87, 0.2), 0 0 50px rgba(135, 169, 107, 0.1)' },
-          '100%': { boxShadow: '0 0 35px rgba(176, 141, 87, 0.4), 0 0 70px rgba(135, 169, 107, 0.2)' },
+          '0%': { boxShadow: '0 0 25px rgba(255, 255, 255, 0.1), 0 0 50px rgba(128, 128, 128, 0.05)' },
+          '100%': { boxShadow: '0 0 35px rgba(255, 255, 255, 0.2), 0 0 70px rgba(128, 128, 128, 0.1)' },
         },
         'renaissance-fade': {
           '0%, 100%': { opacity: '0.1' },

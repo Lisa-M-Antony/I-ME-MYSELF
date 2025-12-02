@@ -20,7 +20,7 @@ const BlogCard = ({ blog, index }) => {
     const colors = {
       'Reflection': 'text-primary-400 bg-primary-400/10',
       'Research Log': 'text-accent-400 bg-accent-400/10',
-      'Journal': 'text-copper-400 bg-copper-400/10',
+      'Journal': 'text-slate-300 bg-slate-300/10',
       'Thought': 'text-warm-400 bg-warm-400/10',
       'Draft': 'text-dark-400 bg-dark-400/10'
     };
