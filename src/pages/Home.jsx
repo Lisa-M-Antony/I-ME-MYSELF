@@ -81,7 +81,7 @@ const Home = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative min-h-screen pt-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-sage-600/10 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '2s' }} />
@@ -111,10 +111,20 @@ const Home = () => {
                    style={{
                      background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)'
                    }}>
-                <img
+                <motion.img
                   src="/Lisa Photo.jpg"
                   alt="Lisa M Antony"
                   className="w-full h-full object-cover object-top"
+                  whileHover={{
+                    scale: 1.05,
+                    x: [0, -3, 3, -2, 2, 0],
+                    y: [0, -2, 2, -1, 1, 0]
+                  }}
+                  transition={{ 
+                    duration: 0.6,
+                    x: { duration: 0.8, ease: "easeInOut" },
+                    y: { duration: 0.8, ease: "easeInOut" }
+                  }}
                 />
                 
                 {/* Subtle glow particles around profile */}
@@ -216,7 +226,7 @@ const Home = () => {
             <motion.div 
               className="relative px-8 py-6 pb-14 rounded-2xl border border-white/30 backdrop-blur-md overflow-visible preserve-3d"
               style={{
-                background: 'linear-gradient(135deg, rgba(176, 141, 87, 0.15) 0%, rgba(255,255,255,0.05) 50%, rgba(135, 169, 107, 0.1) 100%)'
+                background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.15) 0%, rgba(255,255,255,0.05) 50%, rgba(59, 130, 246, 0.1) 100%)'
               }}
               whileHover={{ 
                 scale: 1.02, 
@@ -289,11 +299,11 @@ const Home = () => {
               
               {/* Enhanced mathematical formula decoration */}
               <motion.div 
-                className="absolute -bottom-0.499 left-1/2 transform -translate-x-1/2 text-base text-slate-400 font-mathematical bg-black/90 px-6 py-2 rounded-full backdrop-blur-md border border-white/20 shadow-lg z-20"
+                className="absolute -bottom-0.499 left-1/2 transform -translate-x-1/2 text-base text-slate-300 font-mathematical bg-slate-900/90 px-6 py-2 rounded-full backdrop-blur-md border border-slate-400/20 shadow-lg z-20"
                 whileHover={{ scale: 1.1, y: -2 }}
                 transition={{ duration: 0.2 }}
                 style={{
-                  boxShadow: '0 8px 25px rgba(176, 141, 87, 0.3)'
+                  boxShadow: '0 8px 25px rgba(59, 130, 246, 0.3)'
                 }}
               >
                 ∫ data · insights = impact
@@ -309,15 +319,17 @@ const Home = () => {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-12"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-12 pb-16"
           >
             <Link to="/projects">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group px-10 py-4 bg-gradient-to-r from-slate-600 via-slate-500 to-slate-600 hover:from-slate-500 hover:via-slate-400 hover:to-slate-500 
+                className="group px-10 py-4 bg-gradient-to-r from-slate-600 via-slate-500 to-slate-600 
                          rounded-xl shadow-xl shadow-slate-500/25 flex items-center space-x-3 text-white font-medium transition-all duration-300
-                         border border-white/20 hover:border-white/30 scholar-glow"
+                         border border-white/20 hover:border-slate-400/30 scholar-glow
+                         hover:bg-gradient-to-r hover:from-slate-600/20 hover:via-blue-500/10 hover:to-slate-600/20 hover:backdrop-blur-md
+                         hover:shadow-2xl hover:shadow-blue-500/20"
               >
                 <span className="font-elegant">Explore My Work</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -328,9 +340,13 @@ const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="glass-button border-2 border-sage-500/40 hover:border-sage-400 text-sage-300 hover:text-sage-200 flex items-center space-x-3"
+                className="group px-10 py-4 bg-gradient-to-r from-slate-600 via-slate-500 to-slate-600 
+                         rounded-xl shadow-xl shadow-slate-500/25 flex items-center space-x-3 text-white font-medium transition-all duration-300
+                         border border-white/20 hover:border-slate-400/30 scholar-glow
+                         hover:bg-gradient-to-r hover:from-slate-600/20 hover:via-blue-500/10 hover:to-slate-600/20 hover:backdrop-blur-md
+                         hover:shadow-2xl hover:shadow-blue-500/20"
               >
-                <span className="font-serif">Digital Persona</span>
+                <span className="font-elegant">Digital Persona</span>
                 <span className="font-mathematical">α</span>
               </motion.button>
             </Link>
@@ -347,12 +363,12 @@ const Home = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-copper-400/50 rounded-full flex justify-center backdrop-blur-sm"
+            className="w-6 h-10 border-2 border-slate-400/50 rounded-full flex justify-center backdrop-blur-sm"
           >
             <motion.div
               animate={{ y: [0, 16, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-3 bg-copper-400/80 rounded-full mt-2"
+              className="w-1 h-3 bg-slate-400/80 rounded-full mt-2"
             />
           </motion.div>
         </motion.div>
@@ -369,15 +385,69 @@ const Home = () => {
             className="text-center mb-20"
           >
             <div className="inline-block relative">
-              {/* Decorative mathematical border */}
-              <div className="absolute -top-4 -left-4 text-copper-400/30 font-mathematical text-2xl">∑</div>
-              <div className="absolute -top-4 -right-4 text-sage-400/30 font-mathematical text-2xl">∫</div>
-              <div className="absolute -bottom-4 -left-4 text-sage-400/30 font-mathematical text-2xl">∂</div>
-              <div className="absolute -bottom-4 -right-4 text-white/20 font-mathematical text-2xl">π</div>
+              {/* Decorative mathematical border with animations */}
+              <motion.div 
+                className="absolute -top-4 -left-4 text-copper-400/30 font-mathematical text-2xl"
+                animate={{
+                  rotate: [0, 360],
+                  scale: [1, 1.2, 1]
+                }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >∑</motion.div>
+              <motion.div 
+                className="absolute -top-4 -right-4 text-sage-400/30 font-mathematical text-2xl"
+                animate={{
+                  y: [-2, 2, -2],
+                  opacity: [0.3, 0.7, 0.3]
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1
+                }}
+              >∫</motion.div>
+              <motion.div 
+                className="absolute -bottom-4 -left-4 text-sage-400/30 font-mathematical text-2xl"
+                animate={{
+                  x: [-3, 3, -3],
+                  rotate: [0, -15, 0, 15, 0]
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 2
+                }}
+              >∂</motion.div>
+              <motion.div 
+                className="absolute -bottom-4 -right-4 text-white/20 font-mathematical text-2xl"
+                animate={{
+                  scale: [1, 1.1, 0.9, 1],
+                  rotate: [0, 180, 360]
+                }}
+                transition={{
+                  duration: 10,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5
+                }}
+              >π</motion.div>
               
-              <h2 className="text-4xl md:text-5xl font-elegant font-bold text-white mb-6 elegant-typography">
+              <motion.h2 
+                className="text-4xl md:text-5xl font-elegant font-bold text-white mb-6 elegant-typography"
+                whileHover={{
+                  scale: 1.05,
+                  textShadow: "0 0 30px rgba(255,255,255,0.5)"
+                }}
+                transition={{ duration: 0.3 }}
+              >
                 Fields of Inquiry
-              </h2>
+              </motion.h2>
             </div>
             <p className="text-sage-300 text-xl max-w-3xl mx-auto font-serif leading-relaxed">
               Specializing in the intersection of mathematical theory and practical data science, 
@@ -404,7 +474,7 @@ const Home = () => {
                   }}
                   className="relative preserve-3d group cursor-pointer"
                 >
-                  <div className="relative p-10 rounded-2xl overflow-hidden border border-white/30 backdrop-blur-md text-center"
+                  <div className="relative p-10 rounded-2xl overflow-hidden border border-white/30 backdrop-blur-md text-center h-80"
                        style={{
                          background: `linear-gradient(135deg, rgba(176, 141, 87, 0.12) 0%, rgba(255,255,255,0.05) 50%, rgba(135, 169, 107, 0.08) 100%)`
                        }}>
@@ -460,11 +530,10 @@ const Home = () => {
                     {/* Enhanced Icon with glass effect */}
                     <div className="flex justify-center mb-8 relative z-10">
                       <motion.div
-                        className="relative"
+                        className="relative outline-none focus:outline-none"
                         whileHover={{ 
                           scale: 1.2, 
-                          rotate: 10,
-                          boxShadow: `0 15px 35px rgba(176, 141, 87, 0.4)`
+                          rotate: 10
                         }}
                         transition={{ duration: 0.3 }}
                       >
@@ -508,18 +577,6 @@ const Home = () => {
                       {feature.description}
                     </motion.p>
                     
-                    {/* Enhanced renaissance decoration */}
-                    <motion.div 
-                      className="absolute bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                      whileHover={{ scale: 1.2 }}
-                    >
-                      <div className="flex space-x-3 items-center">
-                        <div className="w-3 h-3 border-2 border-copper-400/60 rounded-full backdrop-blur-sm" />
-                        <div className="w-6 h-1.5 bg-gradient-to-r from-copper-400 to-sage-400 rounded-full" />
-                        <div className="w-3 h-3 border-2 border-sage-400/60 rounded-full backdrop-blur-sm" />
-                      </div>
-                    </motion.div>
-
                     {/* Glass edge effects */}
                     <div className="absolute inset-0 rounded-2xl border-2 border-white/20 pointer-events-none"></div>
                     <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>

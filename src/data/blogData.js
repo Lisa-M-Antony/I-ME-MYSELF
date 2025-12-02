@@ -1,12 +1,12 @@
 export const blogData = [
   {
     id: 1,
-    title: "The Art of Data Storytelling: Beyond Numbers and Charts",
-    date: "2024-11-15",
-    readTime: "8 min read",
+    title: "The Great Alaskan Boyfriend",
+    date: "2024-12-02",
+    readTime: "7 min read",
     category: "Reflection",
-    excerpt: "Data doesn't speak for itself—it whispers. As analysts, we become translators, turning silent patterns into narratives that resonate with human understanding. This essay explores the delicate balance between technical precision and compelling storytelling.",
-    content: "/posts/data-storytelling-art.md",
+    excerpt: "Alaska – The first time I heard about this North American state was a few years back. This is not about Alaska, this is about Chris. A reflection on freedom, dreams, and the courage to walk away from everything.",
+    content: "/posts/great-alaskan-boyfriend.md",
     featured: true
   },
   {

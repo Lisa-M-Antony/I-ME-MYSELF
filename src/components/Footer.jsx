@@ -17,13 +17,13 @@ const Footer = () => {
       icon: Linkedin,
       href: 'https://linkedin.com/in/lisamantony',
       label: 'LinkedIn',
-      color: 'hover:text-primary-400'
+      color: 'hover:text-blue-400'
     },
     {
       icon: Mail,
       href: 'mailto:lisa@example.com',
       label: 'Email',
-      color: 'hover:text-accent-400'
+      color: 'hover:text-slate-400'
     }
   ];
 
@@ -34,7 +34,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary-400 to-accent-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-slate-600 via-slate-500 to-slate-600 rounded-lg flex items-center justify-center shadow-lg shadow-slate-500/25">
                 <span className="text-white font-bold text-sm">LM</span>
               </div>
               <span className="text-xl font-display font-bold gradient-text">
@@ -55,7 +55,7 @@ const Footer = () => {
                   key={link}
                   href={`/${link.toLowerCase().replace(' ', '-')}`}
                   whileHover={{ x: 5 }}
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-200 text-sm"
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm"
                 >
                   {link}
                 </motion.a>
@@ -119,7 +119,7 @@ const Footer = () => {
 
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-t from-primary-600/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-600/20 to-transparent" />
       </div>
     </footer>
   );

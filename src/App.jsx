@@ -18,7 +18,7 @@ import ProfessionalBlackTestLab from './components/ProfessionalBlackTestLab';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen text-white" style={{ background: 'linear-gradient(145deg, #020617 0%, #0f172a 50%, #020617 100%)' }}>
         <Navbar />
         <AnimatePresence mode="wait">
           <Routes>

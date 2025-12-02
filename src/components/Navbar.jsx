@@ -40,7 +40,7 @@ const Navbar = () => {
             <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.5 }}
-              className="w-8 h-8 bg-gradient-to-br from-primary-400 to-accent-500 rounded-lg flex items-center justify-center"
+              className="w-8 h-8 bg-gradient-to-r from-slate-600 via-slate-500 to-slate-600 rounded-lg flex items-center justify-center shadow-lg shadow-slate-500/25"
             >
               <span className="text-white font-bold text-sm">LM</span>
             </motion.div>
@@ -62,7 +62,7 @@ const Navbar = () => {
                     whileTap={{ scale: 0.95 }}
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                       isActive 
-                        ? 'bg-primary-600/20 text-primary-400 neon-glow' 
+                        ? 'bg-slate-800/80 text-slate-100 border border-slate-500/20 shadow-lg backdrop-blur-md' 
                         : 'text-gray-300 hover:text-white hover:bg-white/5'
                     }`}
                   >
@@ -111,7 +111,7 @@ const Navbar = () => {
                     whileHover={{ x: 10 }}
                     className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
                       isActive 
-                        ? 'bg-primary-600/20 text-primary-400' 
+                        ? 'bg-slate-800/80 text-slate-100 border border-slate-500/20 shadow-lg backdrop-blur-md' 
                         : 'text-gray-300 hover:text-white hover:bg-white/5'
                     }`}
                   >
