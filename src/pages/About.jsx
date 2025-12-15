@@ -850,8 +850,7 @@ const About = () => {
                       className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 z-20"
                       whileHover={{ 
                         scale: 1.4, 
-                        rotateY: 360,
-                        boxShadow: "0 0 40px rgba(176, 141, 87, 0.8)"
+                        rotateY: 360
                       }}
                       transition={{ duration: 0.8, type: "spring" }}
                     >
