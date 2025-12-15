@@ -299,8 +299,7 @@ const About = () => {
               whileHover={{ 
                 scale: 1.08, 
                 rotateY: 8, 
-                z: 20,
-                boxShadow: "0 25px 50px rgba(176, 141, 87, 0.3)"
+                z: 20  
               }}
               className="relative preserve-3d group cursor-pointer"
             >
@@ -401,8 +400,7 @@ const About = () => {
               whileHover={{ 
                 scale: 1.08, 
                 rotateY: -8, 
-                z: 20,
-                boxShadow: "0 25px 50px rgba(135, 169, 107, 0.3)"
+                z: 20
               }}
               className="relative preserve-3d group cursor-pointer"
             >
@@ -502,8 +500,7 @@ const About = () => {
               whileHover={{ 
                 scale: 1.08, 
                 rotateY: 8, 
-                z: 20,
-                boxShadow: "0 25px 50px rgba(212, 175, 55, 0.3)"
+                z: 20
               }}
               className="relative preserve-3d group cursor-pointer"
             >
@@ -594,8 +591,7 @@ const About = () => {
               whileHover={{ 
                 scale: 1.08, 
                 rotateY: -8, 
-                z: 20,
-                boxShadow: "0 25px 50px rgba(135, 169, 107, 0.3)"
+                z: 20
               }}
               className="relative preserve-3d group cursor-pointer"
             >
@@ -686,8 +682,7 @@ const About = () => {
               whileHover={{ 
                 scale: 1.08, 
                 rotateY: 5, 
-                z: 20,
-                boxShadow: "0 25px 50px rgba(235, 228, 189, 0.3)"
+                z: 20
               }}
               className="relative preserve-3d group cursor-pointer md:col-span-2"
             >
